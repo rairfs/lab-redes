@@ -1,0 +1,9 @@
+server {
+  listen 63010;
+  server_name www.dynawebbr.com.br;
+  root /var/www/html;
+  index index.html;
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}
