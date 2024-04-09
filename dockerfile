@@ -8,8 +8,8 @@ COPY index.html /var/www/html/
 
 COPY www.dynawebbr.com.br /etc/nginx/sites-available/
 
-RUN unlink /etc/nginx/sites-enabled/default
+CMD unlink /etc/nginx/sites-enabled/default
 
-RUN ln -s /etc/nginx/sites-available/www.dynawebbr.com.br /etc/nginx/sites-enabled
+CMD ln -s /etc/nginx/sites-available/www.dynawebbr.com.br /etc/nginx/sites-enabled
 
-RUN service nginx restart
+CMD service nginx restart
